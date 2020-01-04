@@ -22,6 +22,6 @@ Place these settings in visual studio code user's settings.json
 ___
 ### License
 
-Copyright © 2019 Christos Chousiadas
+Copyright © 2020 Christos Chousiadas
 
 This repository is under the GNU License.
