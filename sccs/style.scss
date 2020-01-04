@@ -1,0 +1,159 @@
+@import "config";
+@import "utilities";
+@import "form";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: $light-color;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: rgb(71, 65, 65);
+  color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+ul {
+  list-style: none; //remove bullets
+}
+
+img {
+  width: 100%;
+}
+
+// Navbar...
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid $primary-color;
+  opacity: 0.7;
+
+  ul {
+    display: flex;
+  }
+
+  a {
+    padding: 0.45rem;
+    color: $primary-color;
+    margin: 0 0.25rem;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+// Landing...
+
+.landing {
+  position: relative;
+  background: url("../img/img1.jpg") no-repeat center center/cover;
+  height: 100vh;
+
+  &-inner {
+    color: $light-color;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+//About us section...
+
+.about-us {
+  display: flex;
+  padding: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  img {
+    width: 250px;
+  }
+}
+
+// Products Page...
+.product {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-gap: 2rem;
+  align-items: center;
+  padding: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+
+  &:hover {
+    box-shadow: 0 0 11px rgba(221, 220, 220, 0.4);
+  }
+}
+
+//Product Page...
+.product-grid {
+  display: grid;
+  grid-template-areas:
+    "top top"
+    "about about";
+  grid-gap: 1rem;
+
+  .product-top {
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &:hover {
+      box-shadow: 0 0 11px rgba(221, 220, 220, 0.4);
+    }
+    img {
+      width: 250px;
+    }
+    .icons a {
+      color: $primary-color;
+      margin: 0 0.3rem;
+
+      &:hover {
+        color: lighten($light-color, $amount: 0.3);
+      }
+    }
+  }
+  .product-about {
+    grid-area: about;
+    text-align: center;
+
+    .benefits {
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    &:hover {
+      box-shadow: 0 0 11px rgba(221, 220, 220, 0.4);
+    }
+  }
+}
