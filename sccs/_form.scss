@@ -1,11 +1,19 @@
 .form {
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem;
+  box-shadow: 0px 2px 15px rgb(95, 88, 88);
+  animation: fadein 1s;
+
   &-group {
+    display: flex;
+    flex-flow: column-reverse;
     margin: 1.2rem 0;
   }
   &-text {
     display: block;
-    margin-top: 0.3rem;
-    color: rgb(196, 181, 181);
+    margin-top: 0.2rem;
+    color: rgb(161, 145, 145);
   }
 
   input[type="text"],
@@ -16,12 +24,13 @@
   textarea {
     display: block;
     width: 100%;
+    border: 0;
     padding: 0.4rem;
     font-size: 1.2rem;
-    border: 1px solid rgb(10, 10, 10);
-    background-color: $dark-color;
+    border-bottom: 2px solid rgb(240, 233, 233);
+    background: none;
     color: $light-color;
-    border-radius: 3px;
+    outline: none;
   }
   input[type="submit"] {
     font: inherit;
@@ -37,6 +46,12 @@
     color: transparent;
   }
 
+  a {
+    margin-left: 0.3rem;
+    &:hover {
+      color: lighten($color: $primary-color, $amount: 10);
+    }
+  }
   .social-input {
     display: flex;
 
@@ -60,5 +75,51 @@
         color: #026092;
       }
     }
+  }
+
+  //floating placeholder....
+
+  label,
+  input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+  }
+  label {
+    font-size: 0.8rem;
+  }
+  /**
+  * Translate down and scale the label up to cover the placeholder,
+  * when following an input (with placeholder-shown support).
+  * Also make sure the label is only on one row, at max 2/3rds of the
+  * field—to make sure it scales properly and doesn't wrap.
+  */
+  input:placeholder-shown + label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+  }
+  /**
+  * By default, the placeholder should be transparent. Also, it should
+  * inherit the transition.
+  */
+  ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+  /**
+  * Show the placeholder when the input is focused.
+  */
+  input:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+
+  input:not(:placeholder-shown) + label,
+  input:focus + label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
   }
 }

@@ -176,6 +176,11 @@ img {
     }
   }
 }
+//footer app bar
+.footer {
+  display: none;
+  overflow: hidden;
+}
 
 //Mobile template..
 @import "mobile";
