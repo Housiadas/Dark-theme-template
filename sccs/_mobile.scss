@@ -1,0 +1,134 @@
+@media (max-width: 650px) {
+  //gia to sticky footer
+  html {
+    height: 100%;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  //   https://css-tricks.com/couple-takes-sticky-footer/
+  //.........
+
+  #dropbtn {
+    display: unset;
+    overflow: unset;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+  .container {
+    margin-top: 8rem;
+  }
+
+  //Text styles....
+  .x-large {
+    font-size: 3rem;
+  }
+  .large {
+    font-size: 2rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+
+  // Navbar.....
+  .navbar {
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+
+    #myLinks {
+      display: none;
+    }
+
+    ul {
+      text-align: center;
+      justify-content: center;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .dash-buttons a {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.2rem;
+  }
+
+  //Products...
+  .product {
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: block;
+
+    ul {
+      display: none;
+    }
+
+    img {
+      width: 150px;
+    }
+  }
+  .product-grid {
+    grid-template-areas: "top" "about";
+
+    .product-top {
+      img {
+        width: 150px;
+      }
+    }
+  }
+
+  //Details style...
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    .item {
+      p {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  //footer...
+  .footer {
+    flex-shrink: 0; //for the sticky footer
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      list-style: none;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

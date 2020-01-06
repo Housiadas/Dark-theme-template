@@ -16,42 +16,135 @@
     <title>Dark theme Sass</title>
   </head>
   <body>
+    <!-- Splash image -->
+    <div id="splash">
+      <img src="./img/logos/logo.png" alt="" />
+    </div>
+    <!-- Navbar -->
     <nav class="navbar bg-dark">
       <h1>
         <a href="index.html"> <i class="fas fa-home"></i> Hamdal </a>
       </h1>
-      <ul>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
+      <!-- <div id="dropbtn">
+        <ul>
+          <li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+        </ul>
+      </div> -->
+      <div id="myLinks">
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
     </nav>
-    <section class="landing">
-      <div class="dark-overlay">
-        <div class="landing-inner">
-          <h2 class="x-large">Under Construction</h2>
-          <p class="lead">Household's IoT platform</p>
-          <div class="buttons">
-            <a href="register.html" class="btn btn-primary">Sign Up</a>
-            <a href="login.html" class="btn btn">Login</a>
+    <div class="content">
+      <section class="landing">
+        <div class="dark-overlay">
+          <div class="landing-inner">
+            <h2 class="x-large">Under Construction</h2>
+            <p class="lead">Household's IoT platform</p>
+            <div class="buttons">
+              <a href="register.html" class="btn btn-primary">Sign Up</a>
+              <a href="login.html" class="btn btn">Login</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="container-about">
-      <h1 class="large text-primary">What we offer</h1>
-      <div class="about-us bg-dark">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus
-          impedit, aliquid est animi recusandae eos ipsa placeat cumque iusto
-          vitae deserunt! Odit quos aspernatur nemo nulla exercitationem id
-          commodi provident. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Enim possimus minus exercitationem impedit molestias consequatur
-          itaque ut vero sint voluptate reiciendis nam, libero atque cum illo.
-          Fuga unde saepe non.
-        </p>
-      </div>
-    </section>
+      </section>
+      <!-- About grid  -->
+      <section class="container-about">
+        <h1 class="large text-primary text-shadow-dark">About us</h1>
+        <div class="about bg-dark p-2">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Repellendus impedit, aliquid est animi recusandae eos ipsa placeat
+            cumque iusto vitae deserunt! Odit quos aspernatur nemo nulla
+            exercitationem id commodi provident. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Enim possimus minus exercitationem
+            impedit molestias consequatur itaque ut vero sint voluptate
+            reiciendis nam, libero atque cum illo. Fuga unde saepe non.
+          </p>
+        </div>
+      </section>
+
+      <!-- What we offer grid  -->
+      <section class="container-about">
+        <h1 class="large text-primary text-shadow-dark">What we offer</h1>
+        <div class="details-grid ">
+          <div class="item bg-dark">
+            <h4>Robust</h4>
+            <p>the system never break down</p>
+            <img src="https://i.ibb.co/XY6WTq6/medal.png" alt="" />
+          </div>
+          <div class="item bg-dark">
+            <h4>Robust</h4>
+            <p>the system never break down</p>
+            <img src="https://i.ibb.co/XY6WTq6/medal.png" alt="" />
+          </div>
+          <div class="item bg-dark">
+            <h4>Robust</h4>
+            <p>the system never break down</p>
+            <img src="https://i.ibb.co/XY6WTq6/medal.png" alt="" />
+          </div>
+          <div class="item bg-dark">
+            <h4>Robust</h4>
+            <p>the system never break down</p>
+            <img src="https://i.ibb.co/XY6WTq6/medal.png" alt="" />
+          </div>
+          <div class="item bg-dark">
+            <h4>Robust</h4>
+            <p>the system never break down</p>
+            <img src="https://i.ibb.co/XY6WTq6/medal.png" alt="" />
+          </div>
+          <div class="item bg-dark">
+            <h4>Robust</h4>
+            <p>the system never break down</p>
+            <img src="https://i.ibb.co/XY6WTq6/medal.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Footer bar section -->
+    <footer class="footer bg-dark">
+      <ul>
+        <li>
+          <i class="fa fa-heart"></i>
+          Home
+        </li>
+        <li>
+          <i class="fa fa-barcode"></i>
+          Show Card
+        </li>
+        <li>
+          <i class="fa fa-user"></i>
+          Account
+        </li>
+        <li>
+          <i class="fa fa-map-marker"></i>
+          Find Store
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Splash javascript -->
+    <script>
+      setTimeout(() => {
+        document.getElementById("splash").classList.toggle("fade");
+      }, 2000);
+
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>
