@@ -1,4 +1,5 @@
-.form {
+.form,
+.form2 {
   padding: 1rem;
   border-radius: 5px;
   margin: 1rem;
@@ -20,8 +21,7 @@
   input[type="email"],
   input[type="password"],
   input[type="date"],
-  select,
-  textarea {
+  select {
     display: block;
     width: 100%;
     border: 0;
@@ -32,8 +32,20 @@
     color: $light-color;
     outline: none;
   }
+  textarea {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    border: 1px solid rgb(240, 233, 233);
+    background: rgb(65, 64, 64);
+    outline: none;
+  }
+
   input[type="submit"] {
     font: inherit;
+    margin: auto;
   }
 
   [placeholder]::-webkit-input-placeholder {
@@ -58,18 +70,8 @@
     i {
       padding: 0.5rem;
       width: 4rem;
-
-      &.fa-twitter {
-        color: #38a1f3;
-      }
       &.fa-facebook {
         color: #3b5998;
-      }
-      &.fa-instagram {
-        color: #3f729b;
-      }
-      &.fa-youtube {
-        color: #db312b;
       }
       &.fa-linkedin {
         color: #026092;
@@ -78,7 +80,6 @@
   }
 
   //floating placeholder....
-
   label,
   input {
     transition: all 0.2s;
@@ -122,4 +123,34 @@
     transform: translate(0, 0) scale(1);
     cursor: pointer;
   }
+  //Form X button style...
+
+  .close {
+    display: flex;
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    opacity: 0.4;
+
+    &:hover {
+      opacity: 1;
+    }
+    &:before,
+    &:after {
+      content: " ";
+      height: 33px;
+      width: 2px;
+      background-color: $primary-color;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.form2 {
+  box-shadow: none;
 }

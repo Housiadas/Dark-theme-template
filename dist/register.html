@@ -30,29 +30,42 @@
     <div class="content">
       <section class="container">
         <form action="dashboard.html" class="form bg-dark">
+          <a href="index.html" class="close"></a>
           <h1 class="large text-primary">
             Sign Up
           </h1>
           <!-- <p class="lead"><i class="fas fa-user"></i> Create Your Account</p> -->
           <div class="form-group">
-            <input type="text" placeholder="Name" required />
+            <input type="text" name="fullname" id="fullname" placeholder=" " />
+            <label for="fullname">Name</label>
           </div>
           <div class="form-group">
-            <input type="email" placeholder="Email Address" />
-            <small class="form-text">
-              This site uses Gravatar, so if you want a profile image, use a
-              Gravatar email
-            </small>
+            <input type="email" name="email" id="email" placeholder=" " />
+            <label for="email">Email</label>
           </div>
+          <small class="form-text">
+            This site uses Gravatar, so if you want a profile image, use a
+            Gravatar email
+          </small>
           <div class="form-group">
-            <input type="password" placeholder="Password" minlength="6" />
+            <input
+              type="password"
+              name="password2"
+              id="password2"
+              placeholder=" "
+              minlength="6"
+            />
+            <label for="password2">Password</label>
           </div>
           <div class="form-group">
             <input
               type="password"
-              placeholder="Confirm Password"
+              name="confpass"
+              id="confpass"
+              placeholder=" "
               minlength="6"
             />
+            <label for="confpass">Confirm Password</label>
           </div>
           <input type="submit" value="Register" class="btn btn-light" />
           <p class="my-1">

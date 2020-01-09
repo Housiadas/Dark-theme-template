@@ -57,7 +57,7 @@
         </div>
       </section>
       <!-- About grid  -->
-      <section class="container-about">
+      <section class="container-fluid">
         <h1 class="large text-primary text-shadow-dark">About us</h1>
         <div class="about bg-dark p-2">
           <p>
@@ -73,9 +73,9 @@
       </section>
 
       <!-- What we offer grid  -->
-      <section class="container-about">
+      <section class="container-fluid">
         <h1 class="large text-primary text-shadow-dark">What we offer</h1>
-        <div class="details-grid ">
+        <div class="details-grid">
           <div class="item bg-dark">
             <h4>Robust</h4>
             <p>the system never break down</p>
@@ -108,9 +108,65 @@
           </div>
         </div>
       </section>
+      <!-- Ask Us anything!!!-->
+      <section class="container-fluid">
+        <div class="msg-grid">
+          <div class="msg bg-dark">
+            <form action="dashboard.html" class="form2 my-2">
+              <h1 class="large text-primary text-shadow-dark">
+                Ask us anything
+              </h1>
+              <div class="form-group">
+                <input type="email" name="email" id="email" placeholder=" " />
+                <label for="email">Email</label>
+              </div>
+              <div class="form-group">
+                <textarea
+                  placeholder="Your Message"
+                  name="msg"
+                  id="msg"
+                ></textarea>
+                <label for="msg">Your Message</label>
+              </div>
+              <input type="submit" value="Send Message" class="btn btn-light" />
+            </form>
+          </div>
+          <div class="msg bg-dark">
+            <!-- <h1 class="large text-primary text-shadow-dark">Socials</h1> -->
+            <img src="./img/logos/footer_img.png" alt="" />
+            <div class="icons my-1">
+              <a href="#">
+                <i class="fab fa-twitter fa-2x"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-facebook fa-2x"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin fa-2x"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    <!-- Footer bar section -->
-    <footer class="footer bg-dark">
+    <!-- Website footer -->
+    <footer class="footer-web bg-dark">
+      <p>2020 <i class="fas fa-copyright"></i> Developed by Housiadas</p>
+      <div class="icons">
+        <a href="#">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Housiadas" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Mobile Footer bar section -->
+    <footer class="footer-mb bg-dark">
       <ul>
         <li>
           <i class="fa fa-heart"></i>

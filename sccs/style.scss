@@ -8,8 +8,18 @@
   margin: 0;
   padding: 0;
 }
+//gia to sticky footer..
+html {
+  height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
 
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   font-family: "Raleway", sans-serif;
   background: $light-color;
   font-size: 1rem;
@@ -32,7 +42,6 @@ img {
 }
 
 // Navbar...
-
 .navbar {
   display: flex;
   align-items: center;
@@ -113,9 +122,6 @@ img {
     text-align: center;
     box-shadow: 0px 2px 6px $primary-color;
 
-    // &:hover {
-    //   box-shadow: 0 0 11px rgba(221, 220, 220, 0.4);
-    // }
     img {
       width: 250px;
     }
@@ -162,7 +168,7 @@ img {
     flex-direction: column;
     padding: 1rem;
     border: 1.5px solid #000;
-    box-shadow: 0px 2px 8px $primary-color;
+    box-shadow: 0px 2px 8px rgb(163, 156, 156);
     img {
       width: 30px;
       align-self: flex-end;
@@ -176,8 +182,57 @@ img {
     }
   }
 }
-//footer app bar
-.footer {
+//Message Contact grid...
+.msg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // width: 100vw;
+
+  .msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    img {
+      width: 200px;
+    }
+
+    .icons a {
+      color: $primary-color;
+      margin: 0 0.3rem;
+
+      &:hover {
+        color: lighten($light-color, $amount: 0.3);
+      }
+    }
+  }
+}
+//Website footer...
+.footer-web {
+  overflow: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+  flex-shrink: 0; //for the sticky footer
+  width: 100%;
+  padding: 1rem;
+
+  .icons a {
+    color: $primary-color;
+    margin: 0 0.3rem;
+
+    &:hover {
+      color: lighten($light-color, $amount: 0.3);
+    }
+  }
+}
+
+//Mobile footer app bar...
+.footer-mb {
   display: none;
   overflow: hidden;
 }

@@ -90,7 +90,6 @@
   }
 
   //Details style...
-
   .details-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -102,17 +101,29 @@
       }
     }
   }
+  //Ask us style...
+  .msg-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
 
   // Form mobile styles...
-  .form {
+  .form,
+  .form2 {
     input[type="submit"] {
       font: inherit;
       width: 100%;
     }
   }
+  //footer-website...
+  .footer-web {
+    display: none;
+    overflow: hidden;
+  }
 
   //footer...
-  .footer {
+  .footer-mb {
     overflow: unset;
     display: unset;
 
